@@ -6,21 +6,8 @@
 //
 
 import UIKit
-let themeWindow = ThemeWindow()
-final class ThemeWindow: UIWindow {
-    
-    override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-
-        // Если текущая тема системная и поменяли оформление в iOS, опять меняем тему на системную.
-        // Например: Пользователь поменял светлое оформление на темное.
-        if Theme.current == .system {
-            Theme.system.setActive()
-        }
-    }
-}
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
     var window: UIWindow?
     var rootController: UINavigationController {
         window = UIWindow()
@@ -43,5 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return ApplicationCoordinator(
             router: RouterImp(rootController: self.rootController, window: window),
             coordinatorFactory: CoordinatorFactoryImp())
+    }
+}
+let themeWindow = ThemeWindow()
+final class ThemeWindow: UIWindow {
+    override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if Theme.current == .system {
+            Theme.system.setActive()
+        }
     }
 }

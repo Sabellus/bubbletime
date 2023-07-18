@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  bubbletime
+
+  Created by  savelii on 18.07.23.
+  
+*/
+"add" = "Add";
+"nameTitle" = "Bubble time";
+"reminder" = "Reminder";
+"passed" = "%@ seconds have passed";

@@ -6,4 +6,6 @@
 //
 
 import Foundation
-protocol MainView:BaseView { }
+protocol MainView:BaseView {
+    var onTapPush: (() -> Void)? { get set }
+}

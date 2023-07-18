@@ -8,7 +8,7 @@
 import Foundation
 final class CoordinatorFactoryImp: CoordinatorFactory {
     func makeMainCoordinator(router: Router) -> Coordinator & MainCoordinatorOutput {
-        let coordinator = MainCoordinator(router: router, factory: ModuleFactoryImp(), coordinatorFactory: self)
+        let coordinator = MainCoordinator(router: router, factory: ModuleFactoryImp(), coordinatorFactory: self, pushFactory: PushManagerFactoryImp())
         return coordinator
     }
 }

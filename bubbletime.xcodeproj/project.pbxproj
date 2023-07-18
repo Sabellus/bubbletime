@@ -31,6 +31,12 @@
 		E6646DF52A65743000C72F7B /* ModuleFactoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6646DF42A65743000C72F7B /* ModuleFactoryImp.swift */; };
 		E6646DF72A6574FC00C72F7B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6646DF62A6574FC00C72F7B /* BaseView.swift */; };
 		E6646DFC2A65763200C72F7B /* Strings+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6646DFB2A65763200C72F7B /* Strings+Extension.swift */; };
+		E6646E002A657A1300C72F7B /* BubbleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6646DFF2A657A1300C72F7B /* BubbleButton.swift */; };
+		E6646E022A65D37F00C72F7B /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6646E012A65D37F00C72F7B /* UITableViewCell+Extension.swift */; };
+		E6646E042A65D91200C72F7B /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6646E032A65D91200C72F7B /* Date+Extension.swift */; };
+		E6646E082A65DDA300C72F7B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E6646E0A2A65DDA300C72F7B /* Localizable.strings */; };
+		E6646E0E2A65F69E00C72F7B /* PushManagerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6646E0D2A65F69E00C72F7B /* PushManagerFactory.swift */; };
+		E6646E132A6684B700C72F7B /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6646E122A6684B700C72F7B /* UIImage+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,15 @@
 		E6646DF42A65743000C72F7B /* ModuleFactoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryImp.swift; sourceTree = "<group>"; };
 		E6646DF62A6574FC00C72F7B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		E6646DFB2A65763200C72F7B /* Strings+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Extension.swift"; sourceTree = "<group>"; };
+		E6646DFF2A657A1300C72F7B /* BubbleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BubbleButton.swift; sourceTree = "<group>"; };
+		E6646E012A65D37F00C72F7B /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		E6646E032A65D91200C72F7B /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		E6646E072A65DD9A00C72F7B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E6646E092A65DDA300C72F7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6646E0B2A65DDA700C72F7B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E6646E0D2A65F69E00C72F7B /* PushManagerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushManagerFactory.swift; sourceTree = "<group>"; };
+		E6646E112A65FB5100C72F7B /* bubbletime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bubbletime.entitlements; sourceTree = "<group>"; };
+		E6646E122A6684B700C72F7B /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +144,8 @@
 		E6646DA32A65661F00C72F7B /* bubbletime */ = {
 			isa = PBXGroup;
 			children = (
+				E6646E112A65FB5100C72F7B /* bubbletime.entitlements */,
+				E6646E0C2A65F68700C72F7B /* Services */,
 				E6646DF82A6575CD00C72F7B /* Coordinator */,
 				E6646DEF2A65731700C72F7B /* Flows */,
 				E6646DE02A656F9E00C72F7B /* Router */,
@@ -137,6 +154,7 @@
 				E6646DAD2A65662100C72F7B /* Assets.xcassets */,
 				E6646DAF2A65662100C72F7B /* LaunchScreen.storyboard */,
 				E6646DB22A65662100C72F7B /* Info.plist */,
+				E6646E0A2A65DDA300C72F7B /* Localizable.strings */,
 				E6646DFA2A6575FD00C72F7B /* Extension */,
 				E6646DD42A656D4100C72F7B /* Theme.swift */,
 			);
@@ -199,6 +217,7 @@
 				E6646DE72A65718B00C72F7B /* MainCoordinatorOutput.swift */,
 				E6646DF02A65732F00C72F7B /* MainViewController.swift */,
 				E6646DF22A6573E500C72F7B /* MainView.swift */,
+				E6646DFF2A657A1300C72F7B /* BubbleButton.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -208,8 +227,19 @@
 			children = (
 				E6646DD62A656DA200C72F7B /* UIColor+Extension.swift */,
 				E6646DFB2A65763200C72F7B /* Strings+Extension.swift */,
+				E6646E012A65D37F00C72F7B /* UITableViewCell+Extension.swift */,
+				E6646E032A65D91200C72F7B /* Date+Extension.swift */,
+				E6646E122A6684B700C72F7B /* UIImage+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		E6646E0C2A65F68700C72F7B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E6646E0D2A65F69E00C72F7B /* PushManagerFactory.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +328,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = E6646D982A65661F00C72F7B;
 			productRefGroup = E6646DA22A65661F00C72F7B /* Products */;
@@ -317,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6646DB12A65662100C72F7B /* LaunchScreen.storyboard in Resources */,
+				E6646E082A65DDA300C72F7B /* Localizable.strings in Resources */,
 				E6646DAE2A65662100C72F7B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +374,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6646E0E2A65F69E00C72F7B /* PushManagerFactory.swift in Sources */,
 				E6646DD52A656D4100C72F7B /* Theme.swift in Sources */,
+				E6646E042A65D91200C72F7B /* Date+Extension.swift in Sources */,
+				E6646E132A6684B700C72F7B /* UIImage+Extension.swift in Sources */,
+				E6646E002A657A1300C72F7B /* BubbleButton.swift in Sources */,
+				E6646E022A65D37F00C72F7B /* UITableViewCell+Extension.swift in Sources */,
 				E6646DEC2A6572B600C72F7B /* MainCoordinator.swift in Sources */,
 				E6646DEA2A65725900C72F7B /* CoordinatorFactoryImp.swift in Sources */,
 				E6646DD92A656E6800C72F7B /* Coordinator.swift in Sources */,
@@ -401,8 +438,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				E6646DB02A65662100C72F7B /* Base */,
+				E6646E072A65DD9A00C72F7B /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E6646E0A2A65DDA300C72F7B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6646E092A65DDA300C72F7B /* en */,
+				E6646E0B2A65DDA700C72F7B /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -412,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -472,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -527,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bubbletime/bubbletime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F89GW9WUTT;
@@ -534,8 +584,7 @@
 				INFOPLIST_FILE = bubbletime/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,6 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bubbletime/bubbletime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F89GW9WUTT;
@@ -562,8 +612,7 @@
 				INFOPLIST_FILE = bubbletime/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

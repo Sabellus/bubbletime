@@ -27,6 +27,7 @@ final class RouterImp: NSObject, Router {
             rootController = initRootController
             window?.rootViewController = self.rootController
         }
+        rootController?.navigationBar.prefersLargeTitles = true
         rootController?.setViewControllers([controller], animated: false)
         rootController?.isNavigationBarHidden = hideBar
     }

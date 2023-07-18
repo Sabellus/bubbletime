@@ -15,6 +15,13 @@ extension UIColor {
         static let whiteWhite = UIColor.color(light: .white, dark: .white)
         static let blackBlack = UIColor.color(light: .black, dark: .black)
         static let greyDark = UIColor.color(light: .hex("C4C4C4"), dark: .hex("3A454E"))
+       
+        static let greyDarkLight = UIColor.color(light: .hex("55646C"), dark: .hex("55646C"))
+        
+        static let greyDarkLightDark = UIColor.color(light: .hex("9BB0C1"), dark: .hex("2D363D"))
+        
+        static let green = UIColor.color(light: .hex("4F986D"), dark: .hex("4F986D"))
+        static let greenLight = UIColor.color(light: .hex("74D49E"), dark: .hex("74D49E"))
     }
 }
 extension UIColor {
