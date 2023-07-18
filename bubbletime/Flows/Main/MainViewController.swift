@@ -32,7 +32,6 @@ class MainViewController: UIViewController, MainView {
         return tableView
     }()
     var times: [Date?] = []
-    var countPush = 0
     var rightItem: UIBarButtonItem?
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -80,8 +79,6 @@ class MainViewController: UIViewController, MainView {
         self.navigationItem.rightBarButtonItem = rightItem
     }
     @objc func tapPush() {
-        countPush+=1
-        rightItem?.title = "+\(countPush)"
         self.onTapPush?()
     }
 }
