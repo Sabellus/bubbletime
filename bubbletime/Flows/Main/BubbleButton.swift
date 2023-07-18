@@ -12,15 +12,28 @@ protocol BubbleButtonProtocol {
 class BubbleButton: UIButton, BubbleButtonProtocol {
     var onTap: (() -> Void)?
     var isDragging = false
+    private let gradientLayer = CAGradientLayer()
+    override var frame: CGRect {
+        didSet {
+            if frame.width > 0 {
+                layer.cornerRadius = frame.width / 2
+            }
+        }
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentEdgeInsets = UIEdgeInsets(top: 0, left: 22, bottom: 0, right: 22)
         backgroundColor = UIColor.Pallete.green
         clipsToBounds = true
         commonInit()
+        setupGradient()
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+    }
+    override func layoutSubviews() {
+          super.layoutSubviews()
+          gradientLayer.frame = bounds
     }
     private func commonInit() {
         addTarget(self, action: #selector(dragged(_:for:)), for: .touchDragInside)
@@ -57,13 +70,6 @@ class BubbleButton: UIButton, BubbleButtonProtocol {
             self.transform = CGAffineTransform(scaleX: 1.15, y: 1.15)
         })
     }
-    override var frame: CGRect {
-        didSet {
-            if frame.width > 0 {
-                layer.cornerRadius = frame.width / 2
-            }
-        }
-    }
     @objc private func dragEnded(_ sender: UIButton) {
         if !isDragging {
             onTap?()
@@ -72,5 +78,12 @@ class BubbleButton: UIButton, BubbleButtonProtocol {
         UIView.animate(withDuration: 0.3, animations: {
             self.transform = CGAffineTransform.identity
         })
+    }
+    private func setupGradient() {
+        gradientLayer.frame = bounds
+        gradientLayer.colors = [UIColor.Pallete.greenLight.cgColor, UIColor.Pallete.green.cgColor] // Укажите цвета вашего градиента
+        gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 }

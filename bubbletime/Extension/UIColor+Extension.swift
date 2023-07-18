@@ -20,8 +20,8 @@ extension UIColor {
         
         static let greyDarkLightDark = UIColor.color(light: .hex("9BB0C1"), dark: .hex("2D363D"))
         
-        static let green = UIColor.color(light: .hex("4F986D"), dark: .hex("4F986D"))
-        static let greenLight = UIColor.color(light: .hex("74D49E"), dark: .hex("74D49E"))
+        static let green = UIColor.color(light: .hex("265636"), dark: .hex("265636"))
+        static let greenLight = UIColor.color(light: .hex("65C28D"), dark: .hex("65C28D"))
     }
 }
 extension UIColor {
